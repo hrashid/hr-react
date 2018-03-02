@@ -53,8 +53,6 @@ export default class App extends Component {
 						<NavLink onClick={() => this.closeMenu()} className="menu-item" exact to="/">Home</NavLink>
 						<NavLink onClick={() => this.closeMenu()} className="menu-item" className="menu-item" to="/photos">Photos</NavLink>
 						<NavLink onClick={() => this.closeMenu()} className="menu-item" to="/contact">Contact</NavLink>
-						<NavLink onClick={() => this.closeMenu()} className="menu-item" to="/idontexist">404 route</NavLink>
-		       <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
 			    </Menu>
 			   </div>
 

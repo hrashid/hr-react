@@ -233,14 +233,11 @@ main {
   padding: 0 3rem;
   z-index: 999;
 }
-.top-bar a {
-  margin-right: 1.5rem;
-  color: #f00;
-  text-decoration: none;
-  font-weight: 500;
-}
-.top-bar a.active {
-  text-decoration: underline;
+.top-bar .site-header {
+  font-size: 25px;
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-left: 55px;
 }
 .page {
   display: -webkit-box;
@@ -251,7 +248,6 @@ main {
           flex: 1;
   -ms-flex-flow: column;
       flex-flow: column;
-  padding: calc(62px + 3rem) 3rem 3rem 3rem;
   height: 100%;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
@@ -282,7 +278,9 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  border: 1px solid #f00;
+}
+.page ul li div img {
+  width: 100%;
 }
 .page ul li a {
   display: -webkit-box;
@@ -293,7 +291,6 @@ main {
           flex: 1;
   -ms-flex-flow: column;
       flex-flow: column;
-  padding: 4rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -302,7 +299,7 @@ main {
           justify-content: center;
   text-align: center;
   text-decoration: none;
-  color: #fff;
+  color: #f00;
 }
 .page ul li a:hover {
   text-decoration: line-through;
@@ -329,13 +326,50 @@ main {
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
 }
+.page.project-item .project-item-header {
+  position: relative;
+}
 .page.project-item h1 {
-  max-width: 35ch;
+  position: absolute;
+  left: 50%;
+  font-size: 50px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 1;
+  color: #fff;
+  text-transform: lowercase;
+  text-shadow: 4px 4px 0px #000;
+  top: 300px;
+  text-align: center;
+  width: 100%;
+}
+.page.project-item .lead-image img {
+  width: 100%;
+  max-width: 100%;
+}
+.page.project-item .body-outer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.page.project-item .body-outer .body-inner {
+  padding: 100px 0;
+  width: 675px;
+  font-size: 20px;
+  line-height: 36px;
 }
 .page.project-item p {
   max-width: 75ch;
 }
 .page.project-item .goBack {
+  display: none;
   font-size: 2rem;
   cursor: pointer;
 }
@@ -380,25 +414,25 @@ main {
   width: 36px;
   height: 30px;
   left: 36px;
-  top: 36px;
+  top: 25px;
 }
 .bm-burger-bars {
-  background: #373a47;
+  background: #f00;
 }
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
+  height: 35px;
+  width: 35px;
 }
 .bm-cross {
   background: #fff;
+  height: 20px !important;
 }
 .bm-menu {
-  background: #373a47;
+  background: #f00;
   padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
 }
 .bm-item-list {
-  color: #b8b7ad;
+  color: #f00;
   padding: 0.8em;
 }
 .bm-overlay {
@@ -407,6 +441,13 @@ main {
 .menu-item {
   display: block;
   color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+.menu-item:hover {
+  text-decoration: underline;
 }
 /*
   Ionicons, v2.0.0
@@ -419,6 +460,22 @@ main {
   used under CC BY http://creativecommons.org/licenses/by/4.0/
   Modified icons to fit ionicon’s grid from original.
 */
+.gallery-outer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.gallery-outer .gallery-inner {
+  padding: 100px 0;
+  width: 905px;
+}
 @font-face {
   font-family: "Ionicons";
   src: url("https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.0");

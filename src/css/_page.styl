@@ -45,19 +45,24 @@ main
   width: 100%
   padding: 0 3rem
   z-index: 999
-  a
-    margin-right: 1.5rem
-    color: red
-    text-decoration: none
-    font-weight: 500
-    &.active
-      text-decoration: underline
+  .site-header
+    font-size 25px
+    text-transform uppercase
+    padding-top 20px
+    padding-left 55px
+  // a
+  //   margin-right: 1.5rem
+  //   color: red
+  //   text-decoration: none
+  //   font-weight: 500
+  //   &.active
+  //     text-decoration: underline
 
 .page
   display: flex
   flex: 1
   flex-flow: column
-  padding: calc(62px + 3rem) 3rem 3rem 3rem
+  //padding: calc(62px + 3rem) 3rem 3rem 3rem
   height: 100%
   overflow-y: scroll
   -webkit-overflow-scrolling: touch
@@ -76,17 +81,19 @@ main
       div
         display: flex
         flex: 1
-        border: 1px solid red
+        //border: 1px solid red
+        img 
+          width 100%
       a
         display: flex
         flex: 1
         flex-flow: column
-        padding: 4rem
+        //padding: 4rem
         align-items: center
         justify-content: center
         text-align: center
         text-decoration: none
-        color: white
+        color: red
         &:hover
           text-decoration: line-through
   &.home
@@ -98,20 +105,51 @@ main
       text-decoration: none
       &:hover
         text-decoration: line-through
+  
   &.projects
     flex-flow: row wrap
     h1
       margin: 0 0 62px 0
     ul
       flex-flow: row wrap
+  
   &.project-item
+    .project-item-header
+      position relative
     h1
-      max-width: 35ch
+      position: absolute;
+      left: 50%;
+      font-size 50px
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      z-index: 1;
+      color: #FFF;
+      text-transform: lowercase;
+      text-shadow: 4px 4px 0px #000;
+      top: 300px;
+      text-align: center;
+      width: 100%;
+    .lead-image
+      img
+        width 100%
+        max-width 100%
+    .body-outer
+      width 100%
+      display flex
+      align-items center
+      justify-content center
+      .body-inner 
+        padding 100px 0   
+        width 675px
+        font-size 20px
+        line-height 36px
     p
       max-width: 75ch
     .goBack
+      display none
       font-size: 2rem
       cursor: pointer
+    
   &.missed
     align-items: center
     align-content: center

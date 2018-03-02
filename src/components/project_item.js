@@ -91,10 +91,16 @@ export default class ProjectItem extends Component {
 				{Object
 	 				.keys(this.state.node)
 	 				.map(key => <div key={key}>
-	 					<h1>{this.state.node[key].title}</h1>
-	 					<p><img src={this.state.node[key].field_lead_image}/></p>
-	 					
-	 					<BasicMapNode
+	 					<div className="project-item-header">
+		 					<h1>{this.state.node[key].title}</h1>
+		 					<div className="lead-image"><img src={this.state.node[key].field_lead_image}/></div>
+	 					</div>				
+	 					<div className="body-outer">
+		 					<div className="body-inner" dangerouslySetInnerHTML={{
+  	    				__html: this.state.node[key].body
+    	 				}}/>
+    	 			</div>
+     				<BasicMapNode
 	 						isOpen
 					  	onToggleOpen
 						  lat={this.state.node[key].lat}
@@ -105,16 +111,17 @@ export default class ProjectItem extends Component {
 						  mapElement={<div style={{ height: `100%` }} />}
 						/>
 
-	 					<div className="body" dangerouslySetInnerHTML={{
-      				__html: this.state.node[key].body
-     				}}/>
+	 					
      				
-     				<LazyLoad
-				      height={720}
-				      onContentVisible={() => console.log('look ma I have been lazyloaded!')}
-				    >
-							<ImageGallery items={this.state.gallery} />	      
-						</LazyLoad>
+						<div className="gallery-outer">
+		 					<div className="gallery-inner">
+		 						<LazyLoad
+				     			height={720}
+				    		>
+									<ImageGallery items={this.state.gallery} />	      
+								</LazyLoad>
+		 					</div>
+    	 			</div>
 
      				</div>
 					)
