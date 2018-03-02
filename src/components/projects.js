@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import TransitionGroup from "react-transition-group/TransitionGroup";
 import * as Animated from "animated/lib/targets/react-dom";
-import InfiniteScroll from "react-infinite-scroller";
+//import InfiniteScroll from "react-infinite-scroller";
 
 
 export default class Projects extends Component {
