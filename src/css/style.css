@@ -389,6 +389,11 @@ main {
 .page.missed h1 {
   font-size: 20vw;
 }
+@media screen and (max-width: 600px) {
+  .top-bar {
+    height: 50px;
+  }
+}
 @media screen and (max-width: 1024px) {
   * h1 {
     max-width: 100% !important;
@@ -396,12 +401,18 @@ main {
   .top-bar {
     padding: 0 1rem;
   }
-  .page {
-    padding: calc(62px + 3rem) 1rem 1rem 1rem;
+  .top-bar .site-header {
+    padding: 10px 0 0 0;
+    font-size: 20px;
   }
   .page ul li {
     width: 100%;
     margin-right: 0;
+  }
+  .project-item .project-item-header h1 {
+    font-size: 22px;
+    top: 85px;
+    text-shadow: 2px 2px 0px #000;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1140px) {
@@ -448,6 +459,14 @@ main {
 }
 .menu-item:hover {
   text-decoration: underline;
+}
+@media screen and (max-width: 600px) {
+  .bm-burger-button {
+    width: 30px;
+    height: 20px;
+    left: 85%;
+    top: 20px;
+  }
 }
 /*
   Ionicons, v2.0.0
@@ -542,7 +561,7 @@ main {
   display: inline-block;
   width: calc(100% - 113px);
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery-slide-wrapper.left,
   .image-gallery-slide-wrapper.right {
     width: calc(100% - 84px);
@@ -577,7 +596,7 @@ main {
 .image-gallery-right-nav:hover::before {
   color: #337ab7;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery-fullscreen-button:hover::before,
   .image-gallery-play-button:hover::before,
   .image-gallery-left-nav:hover::before,
@@ -595,7 +614,7 @@ main {
   padding: 15px 20px;
   text-shadow: 0 1px 1px #1a1a1a;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery-fullscreen-button::before,
   .image-gallery-play-button::before {
     font-size: 2.4em;
@@ -613,7 +632,7 @@ main {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery-fullscreen-button:hover::before,
   .image-gallery-play-button:hover::before {
     -webkit-transform: none;
@@ -657,7 +676,7 @@ main {
   opacity: 0.6;
   pointer-events: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery-left-nav,
   .image-gallery-right-nav {
     font-size: 3.4em;
@@ -712,7 +731,7 @@ main {
   position: absolute;
   white-space: normal;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery-slide .image-gallery-description {
     bottom: 45px;
     font-size: 0.8em;
@@ -747,7 +766,7 @@ main {
   outline: none;
   padding: 5px;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery-bullets .image-gallery-bullet {
     margin: 0 3px;
     padding: 3px;
@@ -770,7 +789,7 @@ main {
   vertical-align: top;
   width: 108px;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery-thumbnails-wrapper.left,
   .image-gallery-thumbnails-wrapper.right {
     width: 81px;
@@ -798,7 +817,7 @@ main {
 .image-gallery-thumbnails-wrapper.left {
   margin-right: 5px;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery-thumbnails-wrapper.left {
     margin-right: 3px;
   }
@@ -806,7 +825,7 @@ main {
 .image-gallery-thumbnails-wrapper.right {
   margin-left: 5px;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery-thumbnails-wrapper.right {
     margin-left: 3px;
   }
@@ -815,7 +834,7 @@ main {
   overflow: hidden;
   padding: 5px 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery-thumbnails {
     padding: 3px 0;
   }
@@ -834,7 +853,7 @@ main {
   transition: border 0.3s ease-out;
   width: 100px;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery-thumbnail {
     border: 3px solid transparent;
     width: 75px;
@@ -850,7 +869,7 @@ main {
 .image-gallery-thumbnail.active {
   border: 4px solid #337ab7;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery-thumbnail.active {
     border: 3px solid #337ab7;
   }
@@ -859,7 +878,7 @@ main {
   color: #1a1a1a;
   font-size: 1em;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery-thumbnail-label {
     font-size: 0.8em;
   }
@@ -874,10 +893,15 @@ main {
   top: 0;
   z-index: 4;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery-index {
     font-size: 0.8em;
     padding: 5px 10px;
+  }
+}
+@media (max-width: 600px) {
+  .gallery-outer .gallery-inner {
+    width: 100%;
   }
 }
 .map {
@@ -937,5 +961,10 @@ main {
   100% {
     -webkit-transform: scale(1.2, 1.2);
     opacity: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .map {
+    height: 300px !important;
   }
 }

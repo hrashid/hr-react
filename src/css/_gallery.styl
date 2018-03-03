@@ -18,7 +18,8 @@
   .gallery-inner 
     padding 100px 0   
     width 905px
-    
+
+   
 @font-face
   font-family: "Ionicons"
   src: url("https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.0")
@@ -73,7 +74,7 @@
 .image-gallery-slide-wrapper.left, .image-gallery-slide-wrapper.right
   display: inline-block
   width: calc(100% - 113px)
-@media (max-width: 768px)
+@media (max-width: 600px)
   .image-gallery-slide-wrapper.left, .image-gallery-slide-wrapper.right
     width: calc(100% - 84px)
 .image-gallery-fullscreen-button,
@@ -100,7 +101,7 @@
   .image-gallery-left-nav:hover::before,
   .image-gallery-right-nav:hover::before
   color: #337ab7
-@media (max-width: 768px)
+@media (max-width: 600px)
   .image-gallery-fullscreen-button:hover::before,
       .image-gallery-play-button:hover::before,
       .image-gallery-left-nav:hover::before,
@@ -114,7 +115,7 @@
   font-size: 2.7em
   padding: 15px 20px
   text-shadow: 0 1px 1px #1a1a1a
-@media (max-width: 768px)
+@media (max-width: 600px)
   .image-gallery-fullscreen-button::before,
       .image-gallery-play-button::before
     font-size: 2.4em
@@ -126,7 +127,7 @@
   .image-gallery-play-button:hover::before
   color: #fff
   transform: scale(1.1)
-@media (max-width: 768px)
+@media (max-width: 600px)
   .image-gallery-fullscreen-button:hover::before,
       .image-gallery-play-button:hover::before
     transform: none
@@ -156,7 +157,7 @@
   cursor: disabled
   opacity: .6
   pointer-events: none
-@media (max-width: 768px)
+@media (max-width: 600px)
   .image-gallery-left-nav,
     .image-gallery-right-nav
     font-size: 3.4em
@@ -198,7 +199,7 @@
   padding: 10px 20px
   position: absolute
   white-space: normal
-@media (max-width: 768px)
+@media (max-width: 600px)
   .image-gallery-slide .image-gallery-description
     bottom: 45px
     font-size: .8em
@@ -226,7 +227,7 @@
   margin: 0 5px
   outline: none
   padding: 5px
-@media (max-width: 768px)
+@media (max-width: 600px)
   .image-gallery-bullets .image-gallery-bullet
     margin: 0 3px
     padding: 3px
@@ -241,7 +242,7 @@
   display: inline-block
   vertical-align: top
   width: 108px
-@media (max-width: 768px)
+@media (max-width: 600px)
   .image-gallery-thumbnails-wrapper.left, .image-gallery-thumbnails-wrapper.right
     width: 81px
 .image-gallery-thumbnails-wrapper.left .image-gallery-thumbnails, .image-gallery-thumbnails-wrapper.right .image-gallery-thumbnails
@@ -259,18 +260,18 @@
   margin-left: 0
 .image-gallery-thumbnails-wrapper.left
   margin-right: 5px
-@media (max-width: 768px)
+@media (max-width: 600px)
   .image-gallery-thumbnails-wrapper.left
     margin-right: 3px
 .image-gallery-thumbnails-wrapper.right
   margin-left: 5px
-@media (max-width: 768px)
+@media (max-width: 600px)
   .image-gallery-thumbnails-wrapper.right
     margin-left: 3px
 .image-gallery-thumbnails
   overflow: hidden
   padding: 5px 0
-@media (max-width: 768px)
+@media (max-width: 600px)
   .image-gallery-thumbnails
     padding: 3px 0
 .image-gallery-thumbnails .image-gallery-thumbnails-container
@@ -283,7 +284,7 @@
   border: 4px solid transparent
   transition: border .3s ease-out
   width: 100px
-@media (max-width: 768px)
+@media (max-width: 600px)
   .image-gallery-thumbnail
     border: 3px solid transparent
     width: 75px
@@ -294,13 +295,13 @@
   width: 100%
 .image-gallery-thumbnail.active
   border: 4px solid #337ab7
-@media (max-width: 768px)
+@media (max-width: 600px)
   .image-gallery-thumbnail.active
     border: 3px solid #337ab7
 .image-gallery-thumbnail-label
   color: #1a1a1a
   font-size: 1em
-@media (max-width: 768px)
+@media (max-width: 600px)
   .image-gallery-thumbnail-label
     font-size: .8em
 .image-gallery-index
@@ -312,7 +313,13 @@
   right: 0
   top: 0
   z-index: 4
-@media (max-width: 768px)
+@media (max-width: 600px)
   .image-gallery-index
     font-size: .8em
     padding: 5px 10px
+    
+
+@media (max-width: 600px)
+  .gallery-outer
+    .gallery-inner 
+      width 100%

@@ -21,16 +21,16 @@ export default class ProjectItem extends Component {
 			this._renderProject(this.props.projects);
 		}
 		const urlid = this.props.match.params.id;
-		const photoNodeEndpoint = `http://api.harrisrashid.com/photosetnode/${urlid}`;
-	     fetch(photoNodeEndpoint)
-	       .then(response => response.json())
-	       .then(node => this.setState({ node }));
-
+			
 	  //Check the width of the device for image optimization below
 	  var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 		var widthvalue = parseInt(width);
 
 	  if(widthvalue < 601){
+	  	const photoNodeEndpoint = `http://api.harrisrashid.com/photosetnode/mobile/${urlid}`;
+	     fetch(photoNodeEndpoint)
+	       .then(response => response.json())
+	       .then(node => this.setState({ node }));
 	  	//Call Endpoint with Mobile Opmtimized Images
 	  	const photoGalleryEndpoint = `http://api.harrisrashid.com/photosetgallery/mobile/${urlid}`;
 	  	fetch(photoGalleryEndpoint)
@@ -38,6 +38,11 @@ export default class ProjectItem extends Component {
 		 	.then(gallery => this.setState({ gallery })); 
 	  	
 	  } else{
+	  	const photoNodeEndpoint = `http://api.harrisrashid.com/photosetnode/${urlid}`;
+	     fetch(photoNodeEndpoint)
+	       .then(response => response.json())
+	       .then(node => this.setState({ node }));
+
 	  	//Call the  Endpoint with Dektop Optimized Images
 	  	const photoGalleryEndpoint = `http://api.harrisrashid.com/photosetgallery/${urlid}`;
 	  	fetch(photoGalleryEndpoint)
