@@ -27,24 +27,24 @@ export default class ProjectItem extends Component {
 		var widthvalue = parseInt(width);
 
 	  if(widthvalue < 601){
-	  	const photoNodeEndpoint = `http://api.harrisrashid.com/photosetnode/mobile/${urlid}`;
+	  	const photoNodeEndpoint = `//api.harrisrashid.com/photosetnode/mobile/${urlid}`;
 	     fetch(photoNodeEndpoint)
 	       .then(response => response.json())
 	       .then(node => this.setState({ node }));
 	  	//Call Endpoint with Mobile Opmtimized Images
-	  	const photoGalleryEndpoint = `http://api.harrisrashid.com/photosetgallery/mobile/${urlid}`;
+	  	const photoGalleryEndpoint = `//api.harrisrashid.com/photosetgallery/mobile/${urlid}`;
 	  	fetch(photoGalleryEndpoint)
 		 	.then(response => response.json())
 		 	.then(gallery => this.setState({ gallery })); 
 	  	
 	  } else{
-	  	const photoNodeEndpoint = `http://api.harrisrashid.com/photosetnode/${urlid}`;
+	  	const photoNodeEndpoint = `//api.harrisrashid.com/photosetnode/${urlid}`;
 	     fetch(photoNodeEndpoint)
 	       .then(response => response.json())
 	       .then(node => this.setState({ node }));
 
 	  	//Call the  Endpoint with Dektop Optimized Images
-	  	const photoGalleryEndpoint = `http://api.harrisrashid.com/photosetgallery/${urlid}`;
+	  	const photoGalleryEndpoint = `//api.harrisrashid.com/photosetgallery/${urlid}`;
 	  	fetch(photoGalleryEndpoint)
 		 	.then(response => response.json())
 		 	.then(gallery => this.setState({ gallery }));    

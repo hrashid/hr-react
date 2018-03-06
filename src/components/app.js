@@ -23,7 +23,7 @@ export default class App extends Component {
 	}
 
 	componentDidMount() {
-		fetch("http://api.harrisrashid.com/photos")
+		fetch("//api.harrisrashid.com/photos")
 			.then(response => {
 				return response.json();
 			})
