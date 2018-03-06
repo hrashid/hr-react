@@ -36,7 +36,8 @@
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.0",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "recompose": "0.26.0"
   },
   "dependencies": {
     "history": "4.2.0",

@@ -45,7 +45,63 @@ export default class App extends Component {
 
 	render() {
 		return (
-				<div>Coming soooooon...hold tight...
+			<div>
+				<div>
+					<Menu isOpen={this.state.menuOpen}
+								onStateChange={(state) => this.handleStateChange(state)}
+					>
+						<NavLink onClick={() => this.closeMenu()} className="menu-item" exact to="/">Home</NavLink>
+						<NavLink onClick={() => this.closeMenu()} className="menu-item" className="menu-item" to="/photos">Photos</NavLink>
+						<NavLink onClick={() => this.closeMenu()} className="menu-item" to="/contact">Contact</NavLink>
+			    </Menu>
+			   </div>
+
+        <div className="wrapper">			
+				<TopBar/>
+				
+
+				<Route
+					render={({ location }) => (
+						<TransitionGroup component="main">
+							<AnimatedSwitch
+								key={location.key}
+								location={location}
+							>
+								<Route 
+									exact 
+									path="/" 
+									render={props => (
+									<Home {...props} projects={this.state.projects} />
+								)} />
+										
+								<Route
+									exact
+									path="/photos/"
+									render={props => (
+										<Projects {...props} projects={this.state.projects} />
+									)}
+								/>
+								
+								<Route
+									exact
+									path="/contact"
+									component={Contact}
+								/>
+								
+
+								<Route
+									path="/photos/:id"
+									render={props => (
+										<ProjectItem {...props} projects={this.state.projects} />
+									)}
+								/>
+								<Route component={Missed} />
+							</AnimatedSwitch>
+						</TransitionGroup>
+					)}
+				/>
+			</div>
+
 				
 			</div>
 		);
@@ -53,58 +109,3 @@ export default class App extends Component {
 }
 
 
-// <div>
-// 					<Menu isOpen={this.state.menuOpen}
-// 								onStateChange={(state) => this.handleStateChange(state)}
-// 					>
-// 						<NavLink onClick={() => this.closeMenu()} className="menu-item" exact to="/">Home</NavLink>
-// 						<NavLink onClick={() => this.closeMenu()} className="menu-item" className="menu-item" to="/photos">Photos</NavLink>
-// 						<NavLink onClick={() => this.closeMenu()} className="menu-item" to="/contact">Contact</NavLink>
-// 			    </Menu>
-// 			   </div>
-
-//         <div className="wrapper">			
-// 				<TopBar/>
-				
-
-// 				<Route
-// 					render={({ location }) => (
-// 						<TransitionGroup component="main">
-// 							<AnimatedSwitch
-// 								key={location.key}
-// 								location={location}
-// 							>
-// 								<Route 
-// 									exact 
-// 									path="/" 
-// 									render={props => (
-// 									<Home {...props} projects={this.state.projects} />
-// 								)} />
-										
-// 								<Route
-// 									exact
-// 									path="/photos/"
-// 									render={props => (
-// 										<Projects {...props} projects={this.state.projects} />
-// 									)}
-// 								/>
-								
-// 								<Route
-// 									exact
-// 									path="/contact"
-// 									component={Contact}
-// 								/>
-								
-
-// 								<Route
-// 									path="/photos/:id"
-// 									render={props => (
-// 										<ProjectItem {...props} projects={this.state.projects} />
-// 									)}
-// 								/>
-// 								<Route component={Missed} />
-// 							</AnimatedSwitch>
-// 						</TransitionGroup>
-// 					)}
-// 				/>
-// 			</div>
